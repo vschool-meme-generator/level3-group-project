@@ -1,3 +1,5 @@
+// Meme component handles the logic for genenrating memes using Axios and displaying 
+// them in the user interface. 
 import React from "react";
 
 function Meme(){
