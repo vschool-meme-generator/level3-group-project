@@ -1,3 +1,4 @@
+//Header component displayed the navBar of the meme generator. 
 import React from "react";
 
 function Header(){
