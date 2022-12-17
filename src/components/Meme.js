@@ -44,9 +44,22 @@ function Meme(){
     //state that stores created memes on submit btn
     const [createdMeme, setCreatedMeme] = React.useState([])
     
-    function createMeme(){
-        
+    function handleSubmit(e){
+        e.preventDefault()
+
+        setCreatedMeme(prevState => [...prevState, meme])
+        setCreatedMeme({
+            topText: meme.topText,
+            bottomText: meme.bottomText,
+            randomImg: meme.randomImg
+        })
+
+            // check for saved memes
+            // console.log(createMeme)
     }
+
+    //map and render each user created meme
+    // const userMeme = createdMeme.map((newMeme, id) => <MemeList/>)
 
     return(
         <main>
@@ -82,6 +95,12 @@ function Meme(){
                 <h2 className="meme-bottom">{meme.bottomText}</h2>
             </div>
             {/* <footer className="footer">Developed by: Dasha Gaytan and Karyna Chernyak 2022</footer> */}
+            {/* save memes */}
+            <div className="meme-save">
+                <button onClick={handleSubmit}>Save My Meme</button>
+            </div>
+            {/* rander saved meme */}
+            {/* {userMeme} */}
         </main>
     )
 }
