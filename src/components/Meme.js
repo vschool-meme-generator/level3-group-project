@@ -59,7 +59,7 @@ function Meme(){
     }
 
     //map and render each user created meme
-    const userMeme = createdMeme.map((newMeme, id) => <MemeList/>)
+    // const userMeme = createdMeme.map((newMeme, id) => <MemeList/>)
 
     return(
         <main>
@@ -88,6 +88,7 @@ function Meme(){
                 > Get Meme Image 🖼</button>
 
             </div>
+            
             <div className="meme-container">
                 <img src = {meme.randomImg} className="meme-img" alt="meme"/>
                 <h2 className="meme-top">{meme.topText}</h2>
@@ -99,7 +100,7 @@ function Meme(){
                 <button onClick={handleSubmit}>Save My Meme</button>
             </div>
             {/* rander saved meme */}
-            {userMeme}
+            {/* {userMeme} */}
         </main>
     )
 }

@@ -4,6 +4,7 @@
 import React from "react";
 
 
+<<<<<<< HEAD
 function MemeList(){
     return(
         <>
@@ -12,3 +13,6 @@ function MemeList(){
 }
 
 export default MemeList;
+=======
+ 
+>>>>>>> main
