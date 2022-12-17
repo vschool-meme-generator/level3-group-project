@@ -4,11 +4,12 @@ import React from "react";
 function Header(){
     return(
         <header className="header">
-            <img src="./images/trollFace.png" className="troll-face" alt="troll-face"/>
+            <img src="https://pngimg.com/uploads/trollface/trollface_PNG9.png" className="troll-face-logo" alt="troll-face"/>
             <h2 className="header--title">Meme Generator</h2>
+            <h4 className="header--project">React Project Capstone - Level 3</h4>
             
-            {/* <h4 className="header--by">By: Dasha and Karyna</h4> */}
-        </header>
+            {/* <h4 className="header--by">By: Dasha G. and Karyna C.</h4> */}
+         </header>
     )
 }
 
