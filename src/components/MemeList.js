@@ -4,3 +4,11 @@
 import React from "react";
 
 
+function MemeList(){
+    return(
+        <>
+        </>
+    )
+}
+
+export default MemeList;
