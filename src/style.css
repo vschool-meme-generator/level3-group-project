@@ -22,13 +22,13 @@ main {
 .header--title{
   font-size: 1.25rem;
   margin-right: auto;
-  color: white;
+  color: red;
 }
 
 .header--project{
   font-size: 0.85rem;
   font-weight: 500;
-  color: white;
+  color: red;
 }
  
 .troll-face-logo{
