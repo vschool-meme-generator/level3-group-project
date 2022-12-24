@@ -1,10 +1,37 @@
-*{
-  margin: 0;
+* {
   box-sizing: border-box;
 }
 
-body{
+body {
   font-family: "Karla", sans-serif;
   margin: 0;
 }
+
+main {
+  padding: 36px;
+}
+
+.header{
+  display: flex;
+    align-items: center;
+    height: 60px;
+    background: linear-gradient(135deg, rgb(82, 229, 231) 10%, rgb(19, 12, 183) 100%);
+    padding: 20px;
+}
+
+.header--title{
+  font-size: 1.25rem;
+  margin-right: auto;
+  color: white;
+}
+
+.header--project{
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: white;
+}
  
+.troll-face-logo{
+  height: 100%;
+  margin-right: 22px;
+}
