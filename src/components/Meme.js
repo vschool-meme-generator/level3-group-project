@@ -12,15 +12,15 @@ function Meme(){
         bottomText: "",
         randomImg: "http://i.imgflip.com/1bij.jpg"
     })
+    //check for object submited
 
     // created state for memes array from given API "https://api.imgflip.com/get_memes"
     const [allMemes, setAllMemes] = React.useState([])
 
     React.useEffect(() => {
-       fetch("https://api.imgflip.com/get_memes")
-        .then(res => res.json())
-        .then(data => setAllMemes(data.data.memes))
-        .catch(err => console.log(err.data))
+       axios.get("https://api.imgflip.com/get_memes")
+       .then(res => setAllMemes(res.data.data.memes))
+       .catch(err => console.log(err.data))
     }, [])
 
     //onClick the meme image will change
@@ -33,7 +33,7 @@ function Meme(){
         }))
     }
 
-    //as input values change meme state uodates
+    //as input values change meme state updates
     function handleChange(e){
         const {name, value} = e.target
         setMeme(prevState => ({
@@ -43,28 +43,51 @@ function Meme(){
     }
 
     //state that stores created memes on submit btn
-    const [createdMeme, setCreatedMeme] = React.useState([])
+    const [createMeme, setCreateMeme] = React.useState([])
     
-    function handleSubmit(e){
-        e.preventDefault()
-
-        setCreatedMeme(prevState => [...prevState, meme])
-        setCreatedMeme({
-            topText: meme.topText,
-            bottomText: meme.bottomText,
-            randomImg: meme.randomImg
-        })
-
-            // check for saved memes
-            // console.log(createMeme)
+    //adds meme to user meme list, generating a key id to new meme object with uuidv
+    function createNewMeme(){
+        const userList = meme
+        userList.id = uuidv4()
+        setCreateMeme(prevState => ([
+            ...prevState,
+            userList
+        ]))
     }
 
-    //map and render each user created meme
-    // const userMeme = createdMeme.map((newMeme, id) => <MemeList/>)
+    //mapping and rendering each creted meme in child component 
+    const listOfMemes = createMeme.map((newMeme, index) => {
+        return(
+            <MemeList 
+                key={index}
+                newMeme={newMeme}
+                saveMeme={saveMeme}
+                deleteMeme={deleteMeme}
+            />
+        )
+    })
+
+//save created meme 
+function saveMeme(m){
+    setCreateMeme(prevState => prevState.map(item => {
+        if(item.id === meme.id){
+            return meme
+        }else{
+            return item
+        }
+    }))
+}
+
+//delete saved meme from the list 
+function deleteMeme(e){
+    //saving meme id inot a variable, Number constructor is called to convert primative numbers
+    const newId = Number(e.target.id)
+    setCreateMeme(prevState => prevState.filter((_,index) => index !== newId))
+}
 
     return(
         <main>
-            <div className="form-container">
+            <div className="form">
                 <input 
                 className="input"
                 type="text"
@@ -92,16 +115,13 @@ function Meme(){
             
             <div className="meme-container">
                 <img src = {meme.randomImg} className="meme-img" alt="meme"/>
-                <h2 className="meme-top">{meme.topText}</h2>
-                <h2 className="meme-bottom">{meme.bottomText}</h2>
+                <h2 className="meme-text top">{meme.topText}</h2>
+                <h2 className="meme-text bottom">{meme.bottomText}</h2>
             </div>
-            {/* <footer className="footer">Developed by: Dasha Gaytan and Karyna Chernyak 2022</footer> */}
-            {/* save memes */}
             <div className="meme-save">
-                <button onClick={handleSubmit}>Save My Meme</button>
+                <button onClick={createNewMeme} className="save-btn">Add Meme to List</button>
             </div>
-            {/* rander saved meme */}
-            {/* {userMeme} */}
+            {listOfMemes}
         </main>
     )
 }
