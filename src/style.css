@@ -3,8 +3,8 @@
 }
 
 body {
-  font-family: "Karla", sans-serif;
   margin: 0;
+  background-color: whitesmoke;
 }
 
 main {
@@ -14,24 +14,154 @@ main {
 .header{
   display: flex;
     align-items: center;
-    height: 60px;
-    background: linear-gradient(135deg, rgb(82, 229, 231) 10%, rgb(19, 12, 183) 100%);
+    height: 65px;
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+    color: white;
     padding: 20px;
+}
+
+.troll-face-logo{
+  height: 100%;
+    margin-right: 6px;
 }
 
 .header--title{
   font-size: 1.25rem;
-  margin-right: auto;
-  color: red;
+    margin-right: auto;
 }
 
 .header--project{
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: red;
+  font-size: 0.75rem;
+    
 }
- 
-.troll-face-logo{
-  height: 100%;
-  margin-right: 22px;
+
+.form{
+  display: grid;
+    grid-template: 40px 40px / 1fr 1fr;
+    gap: 17px;
+    margin-bottom: 17px;
 }
+
+.form > input {
+  font-family: "Karla", sans-serif;
+    border-radius: 5px;
+    border: 1px solid #D5D4D8;
+    text-indent: 5px;
+}
+
+.form--btn{
+  grid-column: 1 / -1;
+    font-family: "Karla", sans-serif;
+    border-radius: 5px;
+    background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.meme-container{
+  position: relative;
+}
+
+.meme-img{
+  max-width: 100%;
+  border-radius: 3px;
+}
+.memeList-container{
+  position: relative;
+
+}
+
+.saved-top-text{
+  position: absolute;
+  top: 0;
+}
+
+.saved-bottom-text{
+  position: absolute;
+  bottom: 0;
+}
+
+.meme--text {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
+    2px 2px 5px #000;
+  
+  
+  
+}
+.bottom {
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+
+.top {
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+
+.delete-btn{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: white; 
+  color: black; 
+  border: 2px solid purple;
+}
+
+.save-btn{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: white; 
+  color: black; 
+  border: 2px solid purple;
+}
+
+
+
+
+.meme-save{
+  position: relative;
+  width: 20%;
+  margin: auto;
+}
+
