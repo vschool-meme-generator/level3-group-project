@@ -66,6 +66,7 @@ function Meme(){
             />
         )
     })
+    console.log(listOfMemes)
 
 //save created meme 
 function saveMeme(m){

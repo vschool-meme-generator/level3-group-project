@@ -5,6 +5,7 @@ import React from "react";
 
 function MemeList(props){
     const newMeme = props.newMeme
+    console.log(newMeme)
     //save state for user created memes
     const [newUserMeme, setNewUserMeme] = React.useState(newMeme)
 
@@ -33,7 +34,9 @@ function MemeList(props){
 
     return(
         <div className="memeList-container">
-            <img className="saved-meme" src={newMeme.url} alt="saved-meme"/>
+            <img className="saved-meme" 
+            src={newMeme.url} 
+            alt="saved-meme"/>
             <h2 className="saved-top-text">{newUserMeme.topText}</h2>
             <h2 className="saved-bottom-text">{newUserMeme.bottomText}</h2>
 
