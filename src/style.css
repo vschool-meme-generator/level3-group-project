@@ -82,14 +82,14 @@ main {
   bottom: 0;
 }
 
-.meme--text {
+.meme-text {
   position: absolute;
   width: 80%;
   text-align: center;
   left: 50%;
   transform: translateX(-50%);
   margin: 15px 0;
-  padding: 0 5px;
+  padding: 5 5px;
   font-family: impact, sans-serif;
   font-size: 2em;
   text-transform: uppercase;
@@ -103,15 +103,14 @@ main {
   
 }
 .bottom {
-  top: 80%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
   width: 80%;
   text-align: center;
-  left: 50%;
   transform: translateX(-50%);
-  bottom: 0;
+  bottom: 10%;
   color: white;
 }
 
@@ -174,4 +173,3 @@ main {
   width: 20%;
   margin: auto;
 }
-
