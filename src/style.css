@@ -72,6 +72,12 @@ main {
 
 }
 
+.saved-meme-btns{
+  width: 200px;
+  margin: 0 auto;
+  display: inline;
+}
+
 .saved-top-text{
   position: absolute;
   top: 0;
@@ -127,18 +133,6 @@ main {
   color: white;
 }
 
-.delete-btn{
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 10px;
-  font-size: 16px;
-  cursor: pointer;
-  padding: 8px 23px;
-  background-color: red; 
-  color: white; 
-  border: 2px solid black;
-}
-
 .save-btn{
   display: flex;
   justify-content: flex-start;
@@ -149,11 +143,22 @@ main {
   cursor: pointer;
   border: 2px solid black;
 }
+.delete-btn{
+  display: inline-block;
+  margin-top: 30px;
+  margin-left: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px 23px;
+  background-color: red; 
+  color: white; 
+  border: 2px solid black;
+}
 
 .edit-btn{
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 10px;
+  display: inline-block;
+  margin-top: 30px;
+  margin-right: 10px;
   padding: 8px 32px;
   font-size: 16px;
   cursor: pointer;
