@@ -58,7 +58,7 @@ function MemeList(props){
                 value={newUserMeme.bottomText}
                 onChange={handleChange}
                 />
-                <button className="save-btn">Save changes</button>
+                <button className="save-changes-btn">Save changes</button>
             </form>
         </div>
     )
