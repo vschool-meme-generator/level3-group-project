@@ -35,7 +35,7 @@ function MemeList(props){
     return(
         <div className="memeList-container">
             <img className="saved-meme" 
-            src={newMeme.url} 
+            src={newMeme.randomImg} 
             alt="saved-meme"/>
             <h2 className="saved-top-text">{newUserMeme.topText}</h2>
             <h2 className="saved-bottom-text">{newUserMeme.bottomText}</h2>
@@ -65,4 +65,4 @@ function MemeList(props){
 }
 
 export default MemeList;
- 
+
