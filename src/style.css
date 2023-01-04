@@ -67,6 +67,12 @@ main {
   max-width: 100%;
   border-radius: 3px;
 }
+
+.saved-meme{
+  max-width: 100%;
+  border-radius: 3px;
+}
+
 .memeList-container{
   position: relative;
 
@@ -78,14 +84,29 @@ main {
   display: inline;
 }
 
-.saved-top-text{
+.saved-top{
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   position: absolute;
-  top: 0;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  color: white;
 }
 
-.saved-bottom-text{
+.saved-bottom{
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   position: absolute;
-  bottom: 0;
+  width: 80%;
+  text-align: center;
+  transform: translateX(-50%);
+  bottom: 10%;
+  color: white;
 }
 
 .meme-text {
@@ -104,9 +125,23 @@ main {
   text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
     -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
     2px 2px 5px #000;
-  
-  
-  
+}
+.text{
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 5 5px;
+  font-family: impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
+    2px 2px 5px #000;
 }
 .bottom {
   top: 60%;

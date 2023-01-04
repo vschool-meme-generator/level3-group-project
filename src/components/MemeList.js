@@ -37,8 +37,8 @@ function MemeList(props){
             <img className="saved-meme" 
             src={newMeme.randomImg} 
             alt="saved-meme"/>
-            <h2 className="saved-top-text">{newUserMeme.topText}</h2>
-            <h2 className="saved-bottom-text">{newUserMeme.bottomText}</h2>
+            <h2 className="saved-top text">{newUserMeme.topText}</h2>
+            <h2 className="saved-bottom text">{newUserMeme.bottomText}</h2>
 
             <div className="saved-meme-btns">
                 <button onClick={editMeme} className="edit-btn">Edit Meme</button>
